@@ -6,6 +6,7 @@ export const generateWhatsAppUrl = (
   const text = encodeURIComponent(
     `Hi Bhagwati Homes, I am ${data.name || 'a prospect resident'}. I would like to confirm my physical visit for ${data.room}${dateStr} during the ${data.slot} time slot.`,
   )
+  const cleanPhone = phone.replace(/\D/g, '') || '919876543210'
   return `https://wa.me/${cleanPhone}?text=${text}`
 }
 
