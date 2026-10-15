@@ -29,14 +29,14 @@ export const Header: React.FC<HeaderProps> = ({
   ]
 
   return (
-    <header className="glass-header sticky top-0 z-40 flex h-[68px] items-center justify-between px-3 md:px-8">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4">
+    <header className="glass-header sticky top-0 z-40 flex h-[64px] sm:h-[68px] items-center justify-between px-3 md:px-8 w-full max-w-full overflow-hidden">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-2 sm:gap-4">
         {/* Brand Logo */}
         <button
           onClick={() => setActiveTab('home')}
-          className="flex shrink-0 items-center gap-2.5 text-left focus:outline-none group"
+          className="flex min-w-0 shrink items-center gap-2 text-left focus:outline-none group"
         >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-soft border border-[#214956]/15 transition-transform group-hover:scale-105">
+          <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-soft border border-[#214956]/15 transition-transform group-hover:scale-105">
             <img
               src={theme.logoUrl || '/assets/logo.png'}
               alt={theme.brandName || 'Bhagwati Homes'}
@@ -44,14 +44,14 @@ export const Header: React.FC<HeaderProps> = ({
               className="h-full w-full object-contain"
             />
           </div>
-          <div>
+          <div className="min-w-0">
             <span
-              className="block text-base sm:text-lg leading-none font-extrabold tracking-tight transition-colors"
+              className="block text-sm sm:text-base md:text-lg leading-tight font-extrabold tracking-tight transition-colors truncate"
               style={{ color: 'var(--color-primary)' }}
             >
               {theme.brandName || 'Bhagwati Homes'}
             </span>
-            <span className="text-[9px] sm:text-[10px] font-semibold tracking-wider text-[#64748B] uppercase">
+            <span className="hidden sm:block text-[9px] sm:text-[10px] font-semibold tracking-wider text-[#64748B] uppercase truncate">
               {theme.tagline || 'Premium Co-living & Luxury PG'}
             </span>
           </div>
@@ -92,16 +92,17 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Action Controls: Comparison + AI Concierge + Profile Avatar */}
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           {/* Compare Button */}
           {comparedCount > 0 && onOpenComparison && (
             <button
               onClick={onOpenComparison}
-              className="animate-shimmer-sheen flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/20 bg-[var(--color-primary)] px-3 py-2 text-xs font-bold text-white shadow-sm transition-all hover:brightness-110 active:scale-95"
+              className="animate-shimmer-sheen flex items-center gap-1 sm:gap-1.5 rounded-full border border-[var(--color-primary)]/20 bg-[var(--color-primary)] px-2.5 sm:px-3 py-1.5 sm:py-2 text-[11px] sm:text-xs font-bold text-white shadow-sm transition-all hover:brightness-110 active:scale-95"
+              title="Compare selected rooms"
             >
-              <Scale className="h-3.5 w-3.5" />
-              <span>Compare</span>
-              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-[10px] font-black text-black">
+              <Scale className="h-3.5 w-3.5 shrink-0" />
+              <span className="hidden xs:inline">Compare</span>
+              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-[10px] font-black text-black shrink-0">
                 {comparedCount}
               </span>
             </button>
@@ -110,11 +111,11 @@ export const Header: React.FC<HeaderProps> = ({
           {/* AI Matcher Concierge Trigger */}
           <button
             onClick={onOpenAiConcierge}
-            className="flex items-center gap-2 rounded-full border border-[var(--color-primary)]/20 bg-[var(--color-primary)]/10 px-3.5 py-2 text-xs font-bold text-[var(--color-primary)] shadow-sm transition-all hover:bg-[var(--color-primary)] hover:text-white active:scale-95"
+            className="flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/20 bg-[var(--color-primary)]/10 px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-[11px] sm:text-xs font-bold text-[var(--color-primary)] shadow-sm transition-all hover:bg-[var(--color-primary)] hover:text-white active:scale-95 shrink-0"
           >
-            <Sparkles className="h-4 w-4 animate-pulse text-[var(--color-accent)]" />
+            <Sparkles className="h-3.5 w-3.5 animate-pulse text-[var(--color-accent)] shrink-0" />
             <span className="hidden sm:inline">AI Match Concierge</span>
-            <span className="sm:hidden">AI Match</span>
+            <span className="sm:hidden font-semibold">AI Match</span>
           </button>
 
           {/* Verified Resident Portal Avatar */}

@@ -56,19 +56,20 @@ export const HeroSection: React.FC<{ onExploreClick: () => void }> = ({ onExplor
           </span>
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3.5 py-2 text-xs font-medium text-white/90 backdrop-blur-md sm:text-sm">
-            <MapPin className="h-4 w-4" style={{ color: 'var(--color-accent)' }} />
-            Koramangala & Indiranagar Hubs, Bengaluru
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 sm:gap-4">
+          <div className="flex max-w-full items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3.5 py-2 text-xs font-medium text-white/90 backdrop-blur-md sm:text-sm">
+            <MapPin className="h-4 w-4 shrink-0" style={{ color: 'var(--color-accent)' }} />
+            <span className="truncate">Koramangala & Indiranagar Hubs, Bengaluru</span>
           </div>
 
           <button
             onClick={onExploreClick}
             style={{ backgroundColor: 'var(--color-accent)' }}
-            className="animate-shimmer-sheen shadow-soft flex items-center gap-2 rounded-xl px-6 py-3 text-xs font-bold text-white transition-all hover:brightness-110 active:scale-95 sm:text-sm"
+            className="animate-shimmer-sheen shadow-soft flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl px-5 py-3 text-xs font-bold text-white transition-all hover:brightness-110 active:scale-95 sm:text-sm"
           >
-            <Sparkles className="h-4 w-4" />
-            Explore All Available Rooms <ArrowRight className="h-4 w-4" />
+            <Sparkles className="h-4 w-4 shrink-0" />
+            <span>Explore All Available Rooms</span>
+            <ArrowRight className="h-4 w-4 shrink-0" />
           </button>
         </div>
       </motion.div>

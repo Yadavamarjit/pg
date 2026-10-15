@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence, type Variants } from 'framer-motion'
 import { updateSeoMetadata } from '@/utils/seo'
+import { SplashScreen } from '@/components/common/SplashScreen'
 import { Header } from '@/components/common/Header'
 import { Footer } from '@/components/common/Footer'
 import { BottomNav } from '@/components/common/BottomNav'
@@ -72,6 +73,7 @@ export default function App() {
   const [quickQuoteRoom, setQuickQuoteRoom] = useState<Room | null>(null)
   const [isComparisonOpen, setIsComparisonOpen] = useState(false)
   const [toastMessage, setToastMessage] = useState<string | null>(null)
+  const [showSplash, setShowSplash] = useState(true)
 
   // Saved rooms bookmarks with localStorage persistence
   const [savedRoomIds, setSavedRoomIds] = useState<string[]>(() => {
@@ -205,9 +207,19 @@ export default function App() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col justify-between bg-[#FAF6F0] text-[#1A202C] antialiased">
+    <div className="flex min-h-screen flex-col justify-between bg-[#FAF6F0] text-[#1A202C] antialiased w-full max-w-full overflow-x-hidden">
+      {/* Full Page Bhagwati Homes Centered Logo Initial Animation */}
+      <AnimatePresence>
+        {showSplash && (
+          <SplashScreen
+            durationMs={2300}
+            onComplete={() => setShowSplash(false)}
+          />
+        )}
+      </AnimatePresence>
+
       {/* App Main Shell */}
-      <div className="flex w-full flex-1 flex-col">
+      <div className="flex w-full max-w-full flex-1 flex-col overflow-x-hidden">
         {/* Responsive Header Navbar */}
         <Header
           onOpenAiConcierge={() => setIsAiConciergeOpen(true)}
@@ -227,7 +239,7 @@ export default function App() {
         </div>
 
         {/* Main Workspace Container */}
-        <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-4 md:px-8 md:py-6">
+        <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-4 md:px-8 md:py-6 overflow-x-hidden">
           <AnimatePresence mode="wait">
             {selectedRoom ? (
               <motion.div
@@ -811,14 +823,14 @@ export default function App() {
 
       {/* Toast Notification Banner */}
       {toastMessage && (
-        <div className="fixed right-4 bottom-24 z-50 flex max-w-sm animate-bounce items-center justify-between rounded-2xl border border-white/20 bg-[#214956] p-4 text-xs font-semibold text-white shadow-2xl md:bottom-8">
-          <div className="flex items-center gap-2">
+        <div className="fixed right-3 left-3 sm:left-auto sm:right-4 bottom-24 z-50 flex max-w-[calc(100vw-1.5rem)] sm:max-w-sm animate-bounce items-center justify-between rounded-2xl border border-white/20 bg-[#214956] p-4 text-xs font-semibold text-white shadow-2xl md:bottom-8">
+          <div className="flex items-center gap-2 min-w-0">
             <CheckCircle className="h-5 w-5 text-emerald-400 shrink-0" />
-            <span>{toastMessage}</span>
+            <span className="truncate">{toastMessage}</span>
           </div>
           <button
             onClick={() => setToastMessage(null)}
-            className="ml-3 p-1 text-white/80 hover:text-white"
+            className="ml-3 p-1 text-white/80 hover:text-white shrink-0"
           >
             ✕
           </button>

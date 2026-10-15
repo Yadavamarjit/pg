@@ -70,7 +70,7 @@ export const TopRoomsReel: React.FC<TopRoomsReelProps> = ({
   }
 
   return (
-    <div className="mb-10">
+    <div className="mb-10 w-full max-w-full overflow-hidden">
       <div className="mb-4 flex items-center justify-between px-1">
         <div>
           <div className="flex items-center gap-2">
