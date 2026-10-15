@@ -17,7 +17,7 @@ export const StayCard: React.FC<{ onOpenMessenger: () => void }> = ({ onOpenMess
       </div>
 
       <h2 className="mb-1 text-xl font-bold tracking-tight">Single Deluxe Suite 302</h2>
-      <p className="mb-5 text-xs text-white/80">UrbanNest Block B, Koramangala 4th Block</p>
+      <p className="mb-5 text-xs text-white/80">Bhagwati Homes Block B, Koramangala 4th Block</p>
 
       <div className="mb-5 grid grid-cols-2 gap-3">
         <div className="rounded-2xl border border-white/10 bg-white/10 p-3 backdrop-blur-sm">
@@ -29,9 +29,9 @@ export const StayCard: React.FC<{ onOpenMessenger: () => void }> = ({ onOpenMess
 
         <div className="rounded-2xl border border-white/10 bg-white/10 p-3 backdrop-blur-sm">
           <div className="mb-1 flex items-center gap-1.5 text-xs text-white/70">
-            <CreditCard className="h-3.5 w-3.5 text-emerald-400" /> Monthly Rent
+            <CreditCard className="h-3.5 w-3.5 text-emerald-400" /> Plan Status
           </div>
-          <div className="font-mono text-sm font-bold">₹18,000 /mo</div>
+          <div className="font-mono text-sm font-bold">Active Member</div>
         </div>
       </div>
 

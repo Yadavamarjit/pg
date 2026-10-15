@@ -55,8 +55,15 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   const refreshTheme = useCallback(async () => {
+    const apiBase = import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? 'http://localhost:8000/api/v1' : '')
+    if (!apiBase) {
+      applyThemeToDom(defaultTheme)
+      setIsLoading(false)
+      return
+    }
+
     try {
-      const res = await fetch('http://localhost:8000/api/v1/theme/?tenant_id=default', {
+      const res = await fetch(`${apiBase}/theme/?tenant_id=default`, {
         signal: AbortSignal.timeout(3000),
       })
       if (res.ok) {

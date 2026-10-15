@@ -17,9 +17,9 @@ export interface ThemeConfig {
 
 export const defaultTheme: ThemeConfig = {
   tenantId: 'default',
-  brandName: 'UrbanNest PG',
-  tagline: 'Premium Co-living & PG',
-  logoUrl: '',
+  brandName: 'Bhagwati Homes',
+  tagline: 'Premium Co-living & Luxury PG',
+  logoUrl: '/assets/logo.png',
   primaryColor: '#214956',
   secondaryColor: '#124000',
   accentColor: '#F35600',

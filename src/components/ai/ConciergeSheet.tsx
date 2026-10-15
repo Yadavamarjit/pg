@@ -153,7 +153,7 @@ export const ConciergeSheet: React.FC<ConciergeSheetProps> = ({
                           <div>
                             <h4 className="text-xs font-bold text-[#1A202C]">{room.title}</h4>
                             <p className="mt-0.5 text-[11px] font-semibold text-[#124000]">
-                              ₹{room.rent.toLocaleString('en-IN')}/mo • {room.typeLabel}
+                              Available • {room.typeLabel}
                             </p>
                           </div>
                         </div>

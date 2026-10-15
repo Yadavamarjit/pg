@@ -79,33 +79,6 @@ export const FilterDrawer: React.FC<FilterDrawerProps> = ({
 
             {/* Scrollable Content */}
             <div className="flex-1 space-y-6 overflow-y-auto p-6">
-              {/* Budget Range Slider */}
-              <div>
-                <div className="mb-2 flex items-center justify-between">
-                  <label className="text-xs font-bold tracking-wider text-[#1A202C] uppercase">
-                    Max Monthly Rent
-                  </label>
-                  <span className="rounded-md border border-[#F35600]/20 bg-[#F35600]/10 px-2 py-0.5 font-mono text-sm font-extrabold text-[#F35600]">
-                    Up to ₹{localFilters.maxBudget.toLocaleString('en-IN')}/mo
-                  </span>
-                </div>
-                <input
-                  type="range"
-                  min={5000}
-                  max={30000}
-                  step={1000}
-                  value={localFilters.maxBudget}
-                  onChange={(e) =>
-                    setLocalFilters({ ...localFilters, maxBudget: Number(e.target.value) })
-                  }
-                  className="h-2 w-full cursor-pointer rounded-lg bg-[#FAF6F0] accent-[#214956]"
-                />
-                <div className="mt-1 flex justify-between font-mono text-[11px] text-[#64748B]">
-                  <span>₹5,000</span>
-                  <span>₹17,500</span>
-                  <span>₹30,000</span>
-                </div>
-              </div>
 
               {/* Segmented Room Types */}
               <div>

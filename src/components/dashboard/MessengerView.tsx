@@ -11,7 +11,7 @@ export const MessengerView: React.FC = () => {
     {
       id: 'm1',
       sender: 'owner',
-      text: 'Hello! Welcome to UrbanNest PG. We have confirmed your visit request for Sept 22nd at 10 AM.',
+      text: 'Hello! Welcome to Bhagwati Homes. We have confirmed your visit request for Sept 22nd at 10 AM.',
       timestamp: '10:30 AM',
     },
     {

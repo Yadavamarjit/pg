@@ -1,9 +1,11 @@
 import type { Room, FilterState, VisitFormData } from '@/types'
 import { mockRooms } from '@/data/mockRooms'
 
-const API_BASE_URL = 'http://localhost:8000/api/v1'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? 'http://localhost:8000/api/v1' : '')
 
 export async function fetchRoomsApi(filters?: FilterState): Promise<Room[]> {
+  if (!API_BASE_URL) return mockRooms
+
   try {
     let url = `${API_BASE_URL}/rooms/`
     if (filters) {
@@ -28,6 +30,8 @@ export async function fetchRoomsApi(filters?: FilterState): Promise<Room[]> {
 export async function submitVisitApi(
   data: VisitFormData & { roomTitle: string },
 ): Promise<boolean> {
+  if (!API_BASE_URL) return true
+
   try {
     const res = await fetch(`${API_BASE_URL}/visits/`, {
       method: 'POST',
@@ -48,6 +52,8 @@ export async function submitVisitApi(
 }
 
 export async function searchAiConciergeApi(query: string, maxBudget = 30000): Promise<Room[]> {
+  if (!API_BASE_URL) return mockRooms.slice(0, 2)
+
   try {
     const res = await fetch(`${API_BASE_URL}/ai/match-room`, {
       method: 'POST',
