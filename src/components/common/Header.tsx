@@ -51,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
             >
               {theme.brandName || 'Bhagwati Homes'}
             </span>
-            <span className="hidden sm:block text-[9px] sm:text-[10px] font-semibold tracking-wider text-[#64748B] uppercase truncate">
+            <span className="hidden md:block text-[9px] sm:text-[10px] font-semibold tracking-wider text-[#64748B] uppercase truncate">
               {theme.tagline || 'Premium Co-living & Luxury PG'}
             </span>
           </div>
@@ -92,16 +92,16 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Action Controls: Comparison + AI Concierge + Profile Avatar */}
-        <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5">
           {/* Compare Button */}
           {comparedCount > 0 && onOpenComparison && (
             <button
               onClick={onOpenComparison}
-              className="animate-shimmer-sheen flex items-center gap-1 sm:gap-1.5 rounded-full border border-[var(--color-primary)]/20 bg-[var(--color-primary)] px-2.5 sm:px-3 py-1.5 sm:py-2 text-[11px] sm:text-xs font-bold text-white shadow-sm transition-all hover:brightness-110 active:scale-95"
+              className="animate-shimmer-sheen flex items-center gap-1 rounded-full border border-[var(--color-primary)]/20 bg-[var(--color-primary)] px-2 sm:px-3 py-1.5 sm:py-2 text-[11px] sm:text-xs font-bold text-white shadow-sm transition-all hover:brightness-110 active:scale-95 shrink-0"
               title="Compare selected rooms"
             >
               <Scale className="h-3.5 w-3.5 shrink-0" />
-              <span className="hidden xs:inline">Compare</span>
+              <span className="hidden sm:inline">Compare</span>
               <span className="flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-[10px] font-black text-black shrink-0">
                 {comparedCount}
               </span>
@@ -111,11 +111,11 @@ export const Header: React.FC<HeaderProps> = ({
           {/* AI Matcher Concierge Trigger */}
           <button
             onClick={onOpenAiConcierge}
-            className="flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/20 bg-[var(--color-primary)]/10 px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-[11px] sm:text-xs font-bold text-[var(--color-primary)] shadow-sm transition-all hover:bg-[var(--color-primary)] hover:text-white active:scale-95 shrink-0"
+            className="flex items-center gap-1 sm:gap-1.5 rounded-full border border-[var(--color-primary)]/20 bg-[var(--color-primary)]/10 px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-[11px] sm:text-xs font-bold text-[var(--color-primary)] shadow-sm transition-all hover:bg-[var(--color-primary)] hover:text-white active:scale-95 shrink-0"
           >
             <Sparkles className="h-3.5 w-3.5 animate-pulse text-[var(--color-accent)] shrink-0" />
             <span className="hidden sm:inline">AI Match Concierge</span>
-            <span className="sm:hidden font-semibold">AI Match</span>
+            <span className="sm:hidden font-bold">AI</span>
           </button>
 
           {/* Verified Resident Portal Avatar */}
