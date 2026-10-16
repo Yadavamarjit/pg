@@ -10,18 +10,18 @@ const mockReviews = [
   {
     id: 'rev-1',
     author: 'Priya Sundaram',
-    role: 'SDE at Razorpay',
+    role: 'SDE at Paytm, Cyber City',
     tenure: 'Resident for 9 months',
     date: 'Sept 2026',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80',
     comment:
-      'Moved here when joining Razorpay Koramangala. The fiber internet has never dipped below 280 Mbps which made on-call shifts super reliable. 3-time hot meals are hygienic, and biometric entry gives complete peace of mind.',
+      'Moved here when joining Paytm in Cyber City. The fiber internet has never dipped below 280 Mbps which made on-call shifts super reliable. 3-time hot meals are hygienic, and biometric entry gives complete peace of mind.',
   },
   {
     id: 'rev-2',
     author: 'Karthik Varma',
-    role: 'Christ University Student',
+    role: 'MDU Student, Rohtak (PG in Gurugram)',
     tenure: 'Resident for 1.2 years',
     date: 'Aug 2026',
     rating: 5,
@@ -32,7 +32,7 @@ const mockReviews = [
   {
     id: 'rev-3',
     author: 'Ananya Deshmukh',
-    role: 'Product Designer at CRED',
+    role: 'Product Designer at MakeMyTrip',
     tenure: 'Resident for 6 months',
     date: 'July 2026',
     rating: 4.9,

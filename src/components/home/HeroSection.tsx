@@ -40,7 +40,7 @@ export const HeroSection: React.FC<{ onExploreClick: () => void }> = ({ onExplor
 
         <p className="mt-3 text-xs leading-relaxed font-normal text-white/90 sm:text-sm md:text-base">
           Hygienic 3-time chef meals, daily housekeeping, 300 Mbps fiber Wi-Fi, and a vibrant
-          student community in Prime Bengaluru.
+          student community in Prime Gurugram, Haryana.
         </p>
 
         {/* Feature Highlights Pills */}
@@ -59,7 +59,7 @@ export const HeroSection: React.FC<{ onExploreClick: () => void }> = ({ onExplor
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3 sm:gap-4">
           <div className="flex max-w-full items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3.5 py-2 text-xs font-medium text-white/90 backdrop-blur-md sm:text-sm">
             <MapPin className="h-4 w-4 shrink-0" style={{ color: 'var(--color-accent)' }} />
-            <span className="truncate">Koramangala & Indiranagar Hubs, Bengaluru</span>
+            <span className="truncate">Sector 20 & 21, Gurugram, Haryana</span>
           </div>
 
           <button

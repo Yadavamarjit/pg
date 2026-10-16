@@ -6,12 +6,12 @@ interface NeighborhoodMapCardProps {
 }
 
 const neighborhoodHighlights = [
-  { name: 'Koramangala 4th Block Metro', time: '5 mins', mode: 'walk', type: 'Transit' },
-  { name: 'Forum Koramangala & Social', time: '6 mins', mode: 'walk', type: 'Leisure' },
-  { name: 'Christ University Main Campus', time: '12 mins', mode: 'transit', type: 'College' },
-  { name: 'Embassy Golf Links Tech Park', time: '14 mins', mode: 'drive', type: 'Tech Park' },
-  { name: 'Apollo 24/7 Pharmacy & Clinic', time: '2 mins', mode: 'walk', type: 'Health' },
-  { name: 'Cult.fit & Third Wave Coffee', time: '4 mins', mode: 'walk', type: 'Fitness' },
+  { name: 'Huda City Centre Metro Station', time: '8 mins', mode: 'drive', type: 'Transit' },
+  { name: 'Ambience Mall & DLF Cyberhub', time: '10 mins', mode: 'drive', type: 'Leisure' },
+  { name: 'IMT Manesar & Maruti Complex', time: '15 mins', mode: 'drive', type: 'Tech Park' },
+  { name: 'Apollo Pharmacy & Clinic', time: '3 mins', mode: 'walk', type: 'Health' },
+  { name: 'DLF Cyber City IT Hub', time: '12 mins', mode: 'drive', type: 'Tech Park' },
+  { name: 'Leisure Valley Park', time: '5 mins', mode: 'walk', type: 'Fitness' },
 ]
 
 export const NeighborhoodMapCard: React.FC<NeighborhoodMapCardProps> = () => {
@@ -30,7 +30,7 @@ export const NeighborhoodMapCard: React.FC<NeighborhoodMapCardProps> = () => {
           </div>
           <div>
             <h3 className="text-sm font-bold text-[#1A202C]">Where You’ll Be • Neighborhood & Commute</h3>
-            <p className="text-[11px] text-[#64748B]">Koramangala 4th Block, Bengaluru (Prime Tech & Student Hub)</p>
+            <p className="text-[11px] text-[#64748B]">Sector 20 & 21, Gurugram, Haryana (Prime Corporate & Student Hub)</p>
           </div>
         </div>
 
@@ -89,7 +89,7 @@ export const NeighborhoodMapCard: React.FC<NeighborhoodMapCardProps> = () => {
             </div>
           </div>
           <span className="mt-1.5 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-[#1A202C] shadow-md backdrop-blur-md">
-            Bhagwati Homes • Koramangala
+            Bhagwati Homes • Gurugram Sec 20-21
           </span>
         </div>
 
@@ -97,7 +97,7 @@ export const NeighborhoodMapCard: React.FC<NeighborhoodMapCardProps> = () => {
           <span className="flex items-center gap-1 font-medium">
             <Navigation className="h-3.5 w-3.5 text-emerald-400" /> Walk Score: 94/100 (Walker’s Paradise)
           </span>
-          <span className="hidden sm:inline font-mono">12.9352° N, 77.6245° E</span>
+          <span className="hidden sm:inline font-mono">28.4595° N, 77.0266° E</span>
         </div>
       </div>
 

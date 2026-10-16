@@ -674,7 +674,7 @@ export default function App() {
                               Verified Resident
                             </span>
                           </div>
-                          <p className="text-xs text-[#64748B]">Resident at Bhagwati Homes Koramangala • Room 302</p>
+                          <p className="text-xs text-[#64748B]">Resident at Bhagwati Homes Gurugram Sec 21 • Room 302</p>
                         </div>
                       </div>
 

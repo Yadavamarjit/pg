@@ -17,7 +17,7 @@ export const StayCard: React.FC<{ onOpenMessenger: () => void }> = ({ onOpenMess
       </div>
 
       <h2 className="mb-1 text-xl font-bold tracking-tight">Single Deluxe Suite 302</h2>
-      <p className="mb-5 text-xs text-white/80">Bhagwati Homes Block B, Koramangala 4th Block</p>
+      <p className="mb-5 text-xs text-white/80">Bhagwati Homes, Sector 20, Gurugram, Haryana</p>
 
       <div className="mb-5 grid grid-cols-2 gap-3">
         <div className="rounded-2xl border border-white/10 bg-white/10 p-3 backdrop-blur-sm">

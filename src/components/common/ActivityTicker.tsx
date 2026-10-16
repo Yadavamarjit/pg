@@ -10,14 +10,14 @@ const activities = [
   {
     icon: '⚡',
     badge: 'Just Booked',
-    text: 'Sneha from HSR Layout scheduled a visit for Suite 302',
+    text: 'Rahul from DLF Phase 2 scheduled a visit for Suite 302',
     time: '2m ago',
     type: 'success',
   },
   {
     icon: '🔥',
     badge: 'High Demand',
-    text: 'Indiranagar Deluxe Studio: Only 1 room remaining',
+    text: 'Sector 21 Deluxe Studio: Only 1 room remaining',
     time: 'Live',
     type: 'urgent',
   },
@@ -31,8 +31,8 @@ const activities = [
   {
     icon: '⭐',
     badge: 'Top Rated',
-    text: '4.9/5 resident satisfaction from 140+ techies & students',
-    time: 'Bengaluru',
+    text: '4.9/5 resident satisfaction from 140+ professionals & students',
+    time: 'Gurugram',
     type: 'social',
   },
 ]
