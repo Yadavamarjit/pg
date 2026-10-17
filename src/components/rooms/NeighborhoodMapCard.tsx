@@ -6,12 +6,12 @@ interface NeighborhoodMapCardProps {
 }
 
 const neighborhoodHighlights = [
+  { name: 'Aggarwal Sweets (Landmark)', time: '2 mins', mode: 'walk', type: 'Food Hub' },
+  { name: 'Vishal Mega Mart / Mall', time: '4 mins', mode: 'walk', type: 'Shopping' },
+  { name: 'DLF Cyber Hub & Cyber City', time: '15 mins', mode: 'drive', type: 'Tech Park' },
   { name: 'Huda City Centre Metro Station', time: '8 mins', mode: 'drive', type: 'Transit' },
-  { name: 'Ambience Mall & DLF Cyberhub', time: '10 mins', mode: 'drive', type: 'Leisure' },
-  { name: 'IMT Manesar & Maruti Complex', time: '15 mins', mode: 'drive', type: 'Tech Park' },
+  { name: 'Ambience Mall Gurugram', time: '10 mins', mode: 'drive', type: 'Leisure' },
   { name: 'Apollo Pharmacy & Clinic', time: '3 mins', mode: 'walk', type: 'Health' },
-  { name: 'DLF Cyber City IT Hub', time: '12 mins', mode: 'drive', type: 'Tech Park' },
-  { name: 'Leisure Valley Park', time: '5 mins', mode: 'walk', type: 'Fitness' },
 ]
 
 export const NeighborhoodMapCard: React.FC<NeighborhoodMapCardProps> = () => {

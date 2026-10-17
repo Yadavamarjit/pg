@@ -12,6 +12,7 @@ import { HeroSection } from '@/components/home/HeroSection'
 import { QuickActionsGrid } from '@/components/home/QuickActionsGrid'
 import { TopRoomsReel } from '@/components/home/TopRoomsReel'
 import { CommonSpacesShowcase } from '@/components/home/CommonSpacesShowcase'
+import { LocalSeoGuideSection } from '@/components/home/LocalSeoGuideSection'
 import { RoomCard } from '@/components/rooms/RoomCard'
 import { FilterDrawer } from '@/components/rooms/FilterDrawer'
 import { RoomGallery } from '@/components/rooms/RoomGallery'
@@ -476,6 +477,7 @@ export default function App() {
                     />
 
                     <CommonSpacesShowcase />
+                    <LocalSeoGuideSection onExploreClick={() => setActiveTab('rooms')} />
                   </div>
                 )}
 

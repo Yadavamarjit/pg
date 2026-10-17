@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://urbannestpg.com/sitemap.xml
+Sitemap: https://bhagwatihomes.in/sitemap.xml

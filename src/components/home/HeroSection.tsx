@@ -39,8 +39,8 @@ export const HeroSection: React.FC<{ onExploreClick: () => void }> = ({ onExplor
         </h1>
 
         <p className="mt-3 text-xs leading-relaxed font-normal text-white/90 sm:text-sm md:text-base">
-          Hygienic 3-time chef meals, daily housekeeping, 300 Mbps fiber Wi-Fi, and a vibrant
-          student community in Prime Gurugram, Haryana.
+          Hygienic 3-time chef meals, 300 Mbps Wi-Fi, daily housekeeping, and zero brokerage.
+          Located near Aggarwal Sweets &amp; Vishal Mall, just 15 mins from DLF Cyber Hub.
         </p>
 
         {/* Feature Highlights Pills */}
