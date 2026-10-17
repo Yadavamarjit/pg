@@ -10,7 +10,7 @@ export const WhatsAppFloat: React.FC = () => {
     const text = encodeURIComponent(
       'Hi Bhagwati Homes, I have a question about room pricing, availability, and physical visits!',
     )
-    window.open(`https://wa.me/919876543210?text=${text}`, '_blank')
+    window.open(`https://wa.me/917357414141?text=${text}`, '_blank')
   }
 
   return (

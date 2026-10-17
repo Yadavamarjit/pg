@@ -23,7 +23,7 @@ export const QuickQuoteModal: React.FC<QuickQuoteModalProps> = ({
     if (typeof window !== 'undefined' && window.navigator?.vibrate) {
       window.navigator.vibrate(15)
     }
-    const url = generatePriceInquiryWhatsAppUrl('919876543210', {
+    const url = generatePriceInquiryWhatsAppUrl('917357414141', {
       roomTitle: room.title,
       layout: room.typeLabel,
     })

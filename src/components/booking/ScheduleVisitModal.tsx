@@ -60,7 +60,7 @@ export const ScheduleVisitModal: React.FC<ScheduleVisitModalProps> = ({
   }
 
   const getWhatsAppLink = () => {
-    return generateWhatsAppUrl('919876543210', {
+    return generateWhatsAppUrl('917357414141', {
       name: fullName,
       room: roomTitle,
       slot: timeSlot,

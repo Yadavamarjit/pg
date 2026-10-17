@@ -126,7 +126,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScheduleVisit }) =
             </div>
             <div className="flex items-center gap-2.5">
               <Phone className="h-4 w-4 text-[#F87A50] shrink-0" />
-              <span>+91 98765 43210 / WhatsApp Support</span>
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <a href="tel:+917357414141" className="hover:text-amber-400 font-medium transition-colors">
+                  +91 73574 14141
+                </a>
+                <span>/</span>
+                <a
+                  href="https://wa.me/917357414141?text=Hi%20Bhagwati%20Homes%2C%20I%20am%20interested%20in%20room%20availability%20and%20pricing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300 font-semibold underline underline-offset-2 transition-colors"
+                >
+                  WhatsApp
+                </a>
+              </div>
             </div>
             <div className="flex items-center gap-2.5">
               <Mail className="h-4 w-4 text-[#F87A50] shrink-0" />

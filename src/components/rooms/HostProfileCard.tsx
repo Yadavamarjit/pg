@@ -9,7 +9,7 @@ export const HostProfileCard: React.FC = () => {
     const text = encodeURIComponent(
       'Hi Vikram, I am interested in viewing rooms at Bhagwati Homes. Could you please help me with availability?',
     )
-    window.open(`https://wa.me/919876543210?text=${text}`, '_blank')
+    window.open(`https://wa.me/917357414141?text=${text}`, '_blank')
   }
 
   return (
@@ -40,7 +40,7 @@ export const HostProfileCard: React.FC = () => {
                 <CheckCircle className="h-3 w-3" /> Identity Verified
               </span>
               <span>•</span>
-              <span>Speaks English, Hindi, Kannada</span>
+              <span>Speaks English, Hindi</span>
             </div>
           </div>
         </div>
