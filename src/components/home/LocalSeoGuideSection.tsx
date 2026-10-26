@@ -8,6 +8,7 @@ import {
   Sparkles,
   PhoneCall,
   CheckCircle2,
+  Search,
 } from 'lucide-react'
 
 interface FAQItem {
@@ -54,6 +55,49 @@ const faqs: FAQItem[] = [
     qHinglish: 'Ladko aur ladkiyo ke liye PG kitna safe aur secure hai?',
     a: 'Yes, Bhagwati Homes maintains a secure, disciplined, and peaceful co-living environment with 24/7 on-site caretaker presence, biometric smart entry locks, CCTV monitoring across common corridors, and strict visitor verification protocols.',
   },
+  {
+    category: 'Local Search & Near Me',
+    q: 'Looking for the best PG near me in Sector 20 or Sector 21 (PG in Secto 20 / PG in Sectro 21)?',
+    qHinglish: 'Mere pass sabse accha PG kaun sa hai Sector 20 ya 21 me?',
+    a: 'Bhagwati Homes is the premier choice located centrally in Sector 20 & 21, Gurugram. Whether you are searching for PG in Secto 20, PG in Sectro 21, or PG near me, our property offers transparent direct-owner pricing, 3-time meals, 300 Mbps Wi-Fi, and walking distance to Aggarwal Sweets and Vishal Mega Mart.',
+  },
+  {
+    category: 'Timings & Freedom',
+    q: 'Are night shifts and late night entry allowed for Cyber City / Udyog Vihar staff?',
+    qHinglish: 'Kya night shift walo ke liye late entry allowed hai bina kisi restriction ke?',
+    a: 'Yes, our premises feature 24/7 biometric smart door access. Corporate professionals working night shifts in DLF Cyber City, Udyog Vihar, and IGI airport can easily access their rooms without restrictive gate curfews.',
+  },
+  {
+    category: 'Dietary Preferences',
+    q: 'Is pure vegetarian food and homestyle cooking available (Ghar jaisa khana)?',
+    qHinglish: 'Kya pure vegetarian khana aur ghar jaisa swad milta hai?',
+    a: 'Yes! We prepare wholesome, hygienic homestyle meals with fresh vegetables, chapatis, dal, and rice. Pure vegetarian options are strictly honored with in-house cooks and filtered RO drinking water.',
+  },
+]
+
+const popularKeywords: string[] = [
+  'PG Near Me',
+  'PG in Sector 20 Gurugram',
+  'PG in Sector 21 Gurugram',
+  'PG in Secto 20',
+  'PG in Sectro 21',
+  'Boys PG Sector 20',
+  'Girls PG Sector 21',
+  'PG in Gurgaon Near Me',
+  'PG Near Cyber Hub',
+  'PG Near Udyog Vihar',
+  'PG Near Aggarwal Sweets',
+  'PG Near Vishal Mega Mart',
+  'Bina Brokerage Ka PG',
+  'Ghar Jaisa Khana PG',
+  '3-Time Food Included PG',
+  '1 RK Fully Furnished',
+  'Single Room PG Gurugram',
+  'Double Sharing Comfort Suite',
+  'Pure Veg PG Gurgaon',
+  'Zero Deposit PG',
+  'Night Shift Friendly PG',
+  'Coliving Spaces Gurugram',
 ]
 
 export const LocalSeoGuideSection: React.FC<{ onExploreClick: () => void }> = ({
@@ -266,6 +310,31 @@ export const LocalSeoGuideSection: React.FC<{ onExploreClick: () => void }> = ({
               Explore Rooms
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Popular Search Keywords & Discovery Tag Cloud */}
+      <div className="rounded-3xl border border-[#214956]/10 bg-white p-5 sm:p-6 shadow-soft">
+        <div className="flex items-center gap-2 mb-2">
+          <Search className="h-4 w-4 text-[var(--color-primary)]" />
+          <h4 className="text-sm font-bold text-[#1A202C]">
+            Popular Searches for PG in Sector 20, 21 &amp; Gurugram
+          </h4>
+        </div>
+        <p className="text-xs text-[#64748B] mb-4">
+          Tap any search term to browse matched rooms and check real-time availability:
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {popularKeywords.map((kw, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={onExploreClick}
+              className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-[#FAF6F0] px-3 py-1.5 text-[11px] font-semibold text-slate-700 hover:border-[var(--color-primary)] hover:bg-white hover:text-[var(--color-primary)] hover:shadow-xs transition-all cursor-pointer"
+            >
+              <span>{kw}</span>
+            </button>
+          ))}
         </div>
       </div>
     </section>
