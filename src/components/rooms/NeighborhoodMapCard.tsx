@@ -71,35 +71,32 @@ export const NeighborhoodMapCard: React.FC<NeighborhoodMapCardProps> = () => {
         </div>
       </div>
 
-      {/* Styled Vicinity Map Visual Card */}
-      <div className="relative mb-5 h-44 sm:h-52 w-full overflow-hidden rounded-2xl bg-slate-900 border border-black/[0.06]">
-        <img
-          src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80"
-          alt="Neighborhood Map Area"
-          className="h-full w-full object-cover opacity-65"
+      {/* The whole map opens the property's Google Maps listing. */}
+      <a
+        href="https://maps.app.goo.gl/JkJsaYxezZmX8EkT7"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Bhagwati Homes at 28.5120915, 77.0723362 in Google Maps (opens in a new tab)"
+        className="relative mb-5 block h-44 sm:h-52 w-full overflow-hidden rounded-2xl bg-slate-100 border border-black/[0.06] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+      >
+        <iframe
+          src="https://maps.google.com/maps?q=28.5120915,77.0723362&z=17&output=embed"
+          title="Bhagwati Homes location: 28.5120915, 77.0723362"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          tabIndex={-1}
+          aria-hidden="true"
+          className="pointer-events-none h-full w-full border-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
-
-        {/* Map Pin Highlight */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-          <div className="relative flex items-center justify-center">
-            <span className="absolute inline-flex h-12 w-12 animate-ping rounded-full bg-[var(--color-accent)] opacity-75" />
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-accent)] text-white shadow-xl ring-4 ring-white">
-              <MapPin className="h-5 w-5" />
-            </div>
-          </div>
-          <span className="mt-1.5 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-[#1A202C] shadow-md backdrop-blur-md">
-            Bhagwati Homes • Gurugram Sec 20-21
+        <div className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 rounded-xl bg-white/95 px-3 py-2 text-[11px] text-[#1A202C] shadow-md">
+          <span className="flex items-center gap-1 font-semibold">
+            <MapPin className="h-3.5 w-3.5 text-[var(--color-accent)]" /> 28.5120915, 77.0723362
+          </span>
+          <span className="flex items-center gap-1 font-bold text-[var(--color-primary)]">
+            <Navigation className="h-3.5 w-3.5" /> Open in Google Maps
           </span>
         </div>
-
-        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-white/90">
-          <span className="flex items-center gap-1 font-medium">
-            <Navigation className="h-3.5 w-3.5 text-emerald-400" /> Walk Score: 94/100 (Walker’s Paradise)
-          </span>
-          <span className="hidden sm:inline font-mono">28.4595° N, 77.0266° E</span>
-        </div>
-      </div>
+      </a>
 
       {/* Commute Times Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
