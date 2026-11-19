@@ -14,7 +14,7 @@ export const WhatsAppFloat: React.FC = () => {
   }
 
   return (
-    <div className="fixed right-4 bottom-20 z-30 flex flex-col items-end gap-2">
+    <div className="fixed right-4 bottom-28 z-30 flex flex-col items-end gap-3 md:bottom-20">
       <motion.button
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.92 }}

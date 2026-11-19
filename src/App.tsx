@@ -80,9 +80,12 @@ export default function App() {
   const [savedRoomIds, setSavedRoomIds] = useState<string[]>(() => {
     try {
       const saved = localStorage.getItem('bhagwati_saved_rooms')
-      return saved ? JSON.parse(saved) : ['room-1', 'room-2']
+      const parsed: unknown = saved ? JSON.parse(saved) : []
+      return Array.isArray(parsed)
+        ? parsed.filter((id): id is string => typeof id === 'string')
+        : []
     } catch {
-      return ['room-1', 'room-2']
+      return []
     }
   })
 
