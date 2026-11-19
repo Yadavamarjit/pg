@@ -17,8 +17,8 @@ export const mockRooms: Room[] = [
     gym: true,
     housekeeping: true,
     powerBackup: true,
-    rating: 4.9,
-    reviewCount: 28,
+    rating: 0,
+    reviewCount: 0,
     images: [
       '/assets/r1.avif',
       '/assets/r2.avif',
@@ -42,7 +42,7 @@ export const mockRooms: Room[] = [
       { name: 'Gurugram Central Library', distance: '7 mins walk', type: 'library' },
       { name: 'Huda City Centre Metro', distance: '8 mins drive', type: 'metro' },
     ],
-    bookedDates: ['2026-09-20', '2026-09-21', '2026-09-25', '2026-09-26', '2026-09-27'],
+    bookedDates: [],
   },
   {
     id: 'room-2',
@@ -60,8 +60,8 @@ export const mockRooms: Room[] = [
     gym: true,
     housekeeping: true,
     powerBackup: true,
-    rating: 4.8,
-    reviewCount: 42,
+    rating: 0,
+    reviewCount: 0,
     images: [
       '/assets/r2.avif',
       '/assets/r3.avif',
@@ -80,7 +80,7 @@ export const mockRooms: Room[] = [
       { name: 'Sector 20 Community Park', distance: '3 mins walk', type: 'metro' },
       { name: 'Medicity Hospital Gurugram', distance: '10 mins drive', type: 'college' },
     ],
-    bookedDates: ['2026-09-19', '2026-09-22', '2026-09-23'],
+    bookedDates: [],
   },
   {
     id: 'room-3',
@@ -98,8 +98,8 @@ export const mockRooms: Room[] = [
     gym: true,
     housekeeping: true,
     powerBackup: true,
-    rating: 5.0,
-    reviewCount: 19,
+    rating: 0,
+    reviewCount: 0,
     images: [
       '/assets/r3.avif',
       '/assets/r4.avif',
@@ -122,7 +122,7 @@ export const mockRooms: Room[] = [
       { name: 'Huda City Centre Metro Station', distance: '10 mins drive', type: 'metro' },
       { name: 'DLF Mega Mall', distance: '12 mins drive', type: 'mall' },
     ],
-    bookedDates: ['2026-09-24', '2026-09-28', '2026-09-29'],
+    bookedDates: [],
   },
   {
     id: 'room-4',
@@ -140,8 +140,8 @@ export const mockRooms: Room[] = [
     gym: true,
     housekeeping: true,
     powerBackup: true,
-    rating: 4.7,
-    reviewCount: 22,
+    rating: 0,
+    reviewCount: 0,
     images: [
       '/assets/r4.avif',
       '/assets/r5.avif',
@@ -159,7 +159,7 @@ export const mockRooms: Room[] = [
       { name: 'Sector 20 Market', distance: '4 mins walk', type: 'library' },
       { name: 'DLF Cyber City Shuttle', distance: '2 mins walk', type: 'metro' },
     ],
-    bookedDates: ['2026-09-21'],
+    bookedDates: [],
   },
   {
     id: 'room-5',
@@ -177,8 +177,8 @@ export const mockRooms: Room[] = [
     gym: true,
     housekeeping: true,
     powerBackup: true,
-    rating: 4.85,
-    reviewCount: 34,
+    rating: 0,
+    reviewCount: 0,
     images: [
       '/assets/r5.avif',
       '/assets/r6.avif',
@@ -196,7 +196,7 @@ export const mockRooms: Room[] = [
       { name: 'Ambience Mall Gurugram', distance: '8 mins drive', type: 'mall' },
       { name: 'Artemis Hospital', distance: '10 mins drive', type: 'college' },
     ],
-    bookedDates: ['2026-09-22', '2026-09-26'],
+    bookedDates: [],
   },
   {
     id: 'room-6',
@@ -214,8 +214,8 @@ export const mockRooms: Room[] = [
     gym: true,
     housekeeping: true,
     powerBackup: true,
-    rating: 4.95,
-    reviewCount: 16,
+    rating: 0,
+    reviewCount: 0,
     images: [
       '/assets/r6.avif',
       '/assets/r1.avif',
@@ -234,7 +234,7 @@ export const mockRooms: Room[] = [
       { name: 'Sector 21 Metro Feeder Bus', distance: '5 mins walk', type: 'metro' },
       { name: 'Galleria Market Gurugram', distance: '7 mins drive', type: 'mall' },
     ],
-    bookedDates: ['2026-09-29', '2026-09-30'],
+    bookedDates: [],
   },
 ]
 
@@ -242,7 +242,7 @@ export const commonSpaces: SystemSpace[] = [
   {
     id: 'space-1',
     title: 'Modern Chef Kitchen & Dining',
-    subtitle: 'Hygienic 3-time daily meals prepared by in-house chefs with spacious dining tables.',
+    subtitle: '2 meals on weekdays and 3 meals on weekends, prepared by in-house chefs with spacious dining tables.',
     image: '/assets/rv2.avif',
     features: ['Custom Meal Tiers', 'RO Water Purifier', '24/7 Fridge Access'],
   },

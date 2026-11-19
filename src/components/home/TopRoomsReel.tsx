@@ -163,10 +163,10 @@ export const TopRoomsReel: React.FC<TopRoomsReelProps> = ({
 
                   {/* Top Right: Rating, Compare & Heart Save Button */}
                   <div className="absolute top-3 right-3 z-20 flex items-center gap-1.5">
-                    <div className="flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-xs font-bold text-[#1A202C] shadow-sm backdrop-blur-md">
+                    {room.reviewCount > 0 && (<div className="flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-xs font-bold text-[#1A202C] shadow-sm backdrop-blur-md">
                       <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                       {room.rating}
-                    </div>
+                    </div>)}
 
                     {onToggleCompare && (
                       <button

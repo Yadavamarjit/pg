@@ -169,7 +169,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
                 <ShieldCheck className="h-3.5 w-3.5 text-emerald-600 shrink-0" /> Zero Brokerage
               </span>
               <span className="inline-flex items-center gap-1 rounded-full border border-black/[0.08] bg-white/95 px-3 py-1 shadow-sm backdrop-blur-sm">
-                <Sparkles className="h-3.5 w-3.5 text-[var(--color-accent)] shrink-0" /> 3-Time Chef Meals
+                <Sparkles className="h-3.5 w-3.5 text-[var(--color-accent)] shrink-0" /> Meals: 2 weekdays / 3 weekends
               </span>
               <span className="hidden xs:inline-flex items-center gap-1 rounded-full border border-black/[0.08] bg-white/95 px-3 py-1 shadow-sm backdrop-blur-sm">
                 <Wifi className="h-3.5 w-3.5 text-[var(--color-primary)] shrink-0" /> 300 Mbps Wi-Fi

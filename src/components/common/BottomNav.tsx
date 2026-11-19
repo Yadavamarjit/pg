@@ -22,7 +22,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
     { id: 'rooms', label: 'Explore', icon: Search },
     { id: 'saved', label: 'Saved', icon: Heart, count: savedCount },
     { id: 'bookings', label: 'Visits', icon: Calendar },
-    { id: 'profile', label: 'Profile', icon: User },
+    { id: 'profile', label: 'Owner', icon: User },
   ]
 
   useEffect(() => {

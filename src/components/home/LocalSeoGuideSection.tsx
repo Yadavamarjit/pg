@@ -28,8 +28,8 @@ const faqs: FAQItem[] = [
   {
     category: 'Food & Dining',
     q: 'Are meals included? What type of food is served (Khana ke sath PG)?',
-    qHinglish: 'Kya 3 time ka khana included hai aur food quality kaisi hai?',
-    a: 'Yes, we provide 3-time daily chef-prepared hygienic homestyle meals (Breakfast, Lunch, and Dinner). The menu is rotated weekly, cooked with fresh ingredients in an in-house clean kitchen with filtered RO water, ensuring wholesome home-cooked nutrition.',
+    qHinglish: 'Weekdays mein 2 aur weekends mein 3 meals included hain?',
+    a: 'Yes, we provide 2 meals on weekdays and 3 meals on weekends. The menu is rotated weekly, cooked with fresh ingredients in an in-house clean kitchen with filtered RO water, ensuring wholesome home-cooked nutrition.',
   },
   {
     category: 'Rent & Brokerage',
@@ -59,7 +59,7 @@ const faqs: FAQItem[] = [
     category: 'Local Search & Near Me',
     q: 'Looking for the best PG near me in Sector 20 or Sector 21 (PG in Secto 20 / PG in Sectro 21)?',
     qHinglish: 'Mere pass sabse accha PG kaun sa hai Sector 20 ya 21 me?',
-    a: 'Bhagwati Homes is the premier choice located centrally in Sector 20 & 21, Gurugram. Whether you are searching for PG in Secto 20, PG in Sectro 21, or PG near me, our property offers transparent direct-owner pricing, 3-time meals, 300 Mbps Wi-Fi, and walking distance to Aggarwal Sweets and Vishal Mega Mart.',
+    a: 'Bhagwati Homes is the premier choice located centrally in Sector 20 & 21, Gurugram. Whether you are searching for PG in Secto 20, PG in Sectro 21, or PG near me, our property offers transparent direct-owner pricing, 2 meals on weekdays and 3 on weekends, 300 Mbps Wi-Fi, and walking distance to Aggarwal Sweets and Vishal Mega Mart.',
   },
   {
     category: 'Timings & Freedom',
@@ -90,7 +90,7 @@ const popularKeywords: string[] = [
   'PG Near Vishal Mega Mart',
   'Bina Brokerage Ka PG',
   'Ghar Jaisa Khana PG',
-  '3-Time Food Included PG',
+  'PG with Weekday & Weekend Meals',
   '1 RK Fully Furnished',
   'Single Room PG Gurugram',
   'Double Sharing Comfort Suite',
@@ -121,7 +121,7 @@ export const LocalSeoGuideSection: React.FC<{ onExploreClick: () => void }> = ({
         </h2>
         <p className="mt-2 text-xs sm:text-sm text-[#64748B] leading-relaxed">
           Affordable luxury living near Aggarwal Sweets and Vishal Mall. Just 15 minutes from DLF
-          Cyber Hub with hygienic 3-time meals, 300 Mbps Wi-Fi &amp; zero brokerage.
+          Cyber Hub with 2 meals on weekdays and 3 on weekends, 300 Mbps Wi-Fi &amp; zero brokerage.
         </p>
       </div>
 
@@ -152,7 +152,7 @@ export const LocalSeoGuideSection: React.FC<{ onExploreClick: () => void }> = ({
               <tr className="border-b border-slate-200 bg-[#FAF6F0] text-slate-700">
                 <th className="py-3 px-3 font-bold">Room Category</th>
                 <th className="py-3 px-3 font-bold">Sharing Plan</th>
-                <th className="py-3 px-3 font-bold">3-Time Meals</th>
+                <th className="py-3 px-3 font-bold">Meal Plan</th>
                 <th className="py-3 px-3 font-bold">Wi-Fi &amp; Power Backup</th>
                 <th className="py-3 px-3 font-bold">Attached Washroom</th>
                 <th className="py-3 px-3 font-bold">Brokerage</th>
@@ -162,7 +162,7 @@ export const LocalSeoGuideSection: React.FC<{ onExploreClick: () => void }> = ({
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-3 font-semibold text-[#1A202C]">Executive Single Suite</td>
                 <td className="py-3 px-3">Private Single Occupancy</td>
-                <td className="py-3 px-3 text-emerald-600 font-medium">Included (Chef Made)</td>
+                <td className="py-3 px-3 text-emerald-600 font-medium">2 weekday / 3 weekend meals</td>
                 <td className="py-3 px-3">300 Mbps + 100% Generator</td>
                 <td className="py-3 px-3">Private Attached (Geyser)</td>
                 <td className="py-3 px-3 font-bold text-emerald-600">₹0 (Zero Brokerage)</td>
@@ -170,7 +170,7 @@ export const LocalSeoGuideSection: React.FC<{ onExploreClick: () => void }> = ({
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-3 font-semibold text-[#1A202C]">Double Sharing Comfort</td>
                 <td className="py-3 px-3">2 Persons / Twin Beds</td>
-                <td className="py-3 px-3 text-emerald-600 font-medium">Included (Chef Made)</td>
+                <td className="py-3 px-3 text-emerald-600 font-medium">2 weekday / 3 weekend meals</td>
                 <td className="py-3 px-3">300 Mbps + 100% Generator</td>
                 <td className="py-3 px-3">Shared En-suite</td>
                 <td className="py-3 px-3 font-bold text-emerald-600">₹0 (Zero Brokerage)</td>
@@ -178,7 +178,7 @@ export const LocalSeoGuideSection: React.FC<{ onExploreClick: () => void }> = ({
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-3 font-semibold text-[#1A202C]">Studio Penthouse</td>
                 <td className="py-3 px-3">Single / Couple Layout</td>
-                <td className="py-3 px-3 text-emerald-600 font-medium">Included + Kitchenette</td>
+                <td className="py-3 px-3 text-emerald-600 font-medium">2 weekday / 3 weekend meals + Kitchenette</td>
                 <td className="py-3 px-3">Dedicated Wi-Fi 6 Router</td>
                 <td className="py-3 px-3">Luxury Glass Shower</td>
                 <td className="py-3 px-3 font-bold text-emerald-600">₹0 (Zero Brokerage)</td>
@@ -220,7 +220,7 @@ export const LocalSeoGuideSection: React.FC<{ onExploreClick: () => void }> = ({
             <h4>Ghar Jaisa Khana &amp; Daily Clean</h4>
           </div>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Hygienic 3 times home-style cooking prepared daily by professional cooks. Clean dining
+            Hygienic home-style meals: 2 meals on weekdays and 3 meals on weekends. Clean dining
             hall, alternate-day room dusting, and daily bathroom sanitization.
           </p>
         </div>

@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'rooms', label: 'Explore Spaces', icon: Search },
     { id: 'saved', label: 'Saved', icon: Heart, count: savedCount },
     { id: 'bookings', label: 'Visits', icon: Calendar },
-    { id: 'profile', label: 'Resident Club', icon: ShieldCheck },
+    { id: 'profile', label: 'Contact Owner', icon: ShieldCheck },
   ]
 
   return (
@@ -118,7 +118,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="sm:hidden font-bold">AI</span>
           </button>
 
-          {/* Verified Resident Portal Avatar */}
+          {/* Verified Owner Contact Avatar */}
           <div
             onClick={() => setActiveTab('profile')}
             className="hidden items-center gap-2 border-l border-[var(--color-primary)]/15 pl-2 lg:flex cursor-pointer hover:opacity-85"
@@ -130,8 +130,8 @@ export const Header: React.FC<HeaderProps> = ({
               {(theme.brandName || 'BH').substring(0, 2).toUpperCase()}
             </div>
             <div className="text-left text-xs">
-              <span className="block leading-none font-bold text-[var(--color-text-primary)]">Resident Portal</span>
-              <span className="text-[10px] font-semibold text-[var(--color-secondary)]">Verified Member</span>
+              <span className="block leading-none font-bold text-[var(--color-text-primary)]">Owner Contact</span>
+              <span className="text-[10px] font-semibold text-[var(--color-secondary)]">Contact Sachin</span>
             </div>
           </div>
         </div>

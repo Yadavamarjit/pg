@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScheduleVisit }) =
               </div>
             </div>
             <p className="text-xs leading-relaxed text-slate-300">
-              Bhagwati Homes provides luxury single, double, and studio PG rooms with hygienic 3-time chef meals, 300 Mbps Wi-Fi, daily housekeeping, biometric security, and zero brokerage in Sector 20 & 21, Gurugram, Haryana.
+              Bhagwati Homes provides luxury single, double, and studio PG rooms with 2 meals on weekdays and 3 on weekends, 300 Mbps Wi-Fi, daily housekeeping, biometric security, and zero brokerage in Sector 20 & 21, Gurugram, Haryana.
             </p>
             <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400">
               <ShieldCheck className="h-4 w-4 shrink-0" />
@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScheduleVisit }) =
                   onClick={() => onNavigate('support')}
                   className="transition-colors hover:text-white"
                 >
-                  Resident Support & Messenger
+                  Contact Sachin, Owner
                 </button>
               </li>
             </ul>
@@ -127,6 +127,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScheduleVisit }) =
             <div className="flex items-center gap-2.5">
               <Phone className="h-4 w-4 text-[#F87A50] shrink-0" />
               <div className="flex items-center gap-1.5 flex-wrap">
+                <span className="w-full font-semibold text-white">Sachin, Owner</span>
                 <a href="tel:+917357414141" className="hover:text-amber-400 font-medium transition-colors">
                   +91 73574 14141
                 </a>

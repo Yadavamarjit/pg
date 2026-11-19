@@ -17,7 +17,6 @@ import { RoomCard } from '@/components/rooms/RoomCard'
 import { FilterDrawer } from '@/components/rooms/FilterDrawer'
 import { RoomGallery } from '@/components/rooms/RoomGallery'
 import { BookingCalendar } from '@/components/rooms/BookingCalendar'
-import { ReviewsSection } from '@/components/rooms/ReviewsSection'
 import { HostProfileCard } from '@/components/rooms/HostProfileCard'
 import { NeighborhoodMapCard } from '@/components/rooms/NeighborhoodMapCard'
 import { MobileStickyBookingBar } from '@/components/rooms/MobileStickyBookingBar'
@@ -31,7 +30,6 @@ import { mockRooms } from '@/data/mockRooms'
 import type { FilterState, Room } from '@/types'
 import {
   SlidersHorizontal,
-  Star,
   Wifi,
   Shield,
   Check,
@@ -39,9 +37,6 @@ import {
   CheckCircle,
   ArrowLeft,
   Heart,
-  UserCheck,
-  KeyRound,
-  UtensilsCrossed,
   Scale,
 } from 'lucide-react'
 
@@ -90,7 +85,7 @@ export default function App() {
   })
 
   // Comparison spaces state (up to 3 rooms)
-  const [comparedRoomIds, setComparedRoomIds] = useState<string[]>(['room-1', 'room-2'])
+  const [comparedRoomIds, setComparedRoomIds] = useState<string[]>([])
 
   // Filter state
   const [filters, setFilters] = useState<FilterState>({
@@ -321,10 +316,6 @@ export default function App() {
                           {selectedRoom.title}
                         </motion.h1>
                         <div className="mt-1 flex items-center gap-2 text-xs text-[#64748B]">
-                          <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
-                          <span className="font-bold text-[#1A202C]">{selectedRoom.rating}</span>
-                          <span>({selectedRoom.reviewCount} verified resident reviews)</span>
-                          <span>•</span>
                           <span className="text-emerald-700 font-semibold">Available {selectedRoom.availableFrom}</span>
                         </div>
                       </div>
@@ -381,13 +372,7 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* Airbnb-style Verified Reviews & Ratings Breakdown */}
-                    <ReviewsSection
-                      rating={selectedRoom.rating}
-                      reviewCount={selectedRoom.reviewCount}
-                    />
-
-                    {/* Verified Host / Community Manager Profile Card */}
+                    {/* Property owner contact */}
                     <HostProfileCard />
 
                     {/* Interactive Neighborhood Vicinity & Commute Hub */}
@@ -654,69 +639,23 @@ export default function App() {
                   <div className="mx-auto max-w-4xl space-y-6">
                     <div>
                       <h1 className="text-xl font-bold text-[#1A202C] md:text-2xl">
-                        Your Scheduled Visits & Resident Status
+                        Arrange a Visit
                       </h1>
                       <p className="text-xs text-[#64748B] md:text-sm">
-                        Track your walk-through visit appointments and upcoming move-in contracts
+                        Choose a convenient time with Sachin before visiting.
                       </p>
                     </div>
                     <StayCard onOpenMessenger={() => setActiveTab('support')} />
                   </div>
                 )}
 
-                {/* Tab: PROFILE / RESIDENT CLUB */}
+                {/* Owner contact and the visitor's saved rooms */}
                 {activeTab === 'profile' && (
                   <div className="mx-auto max-w-3xl space-y-6">
-                    <div className="shadow-soft-lg rounded-3xl border border-[var(--color-primary)]/10 bg-white p-6 sm:p-8">
-                      <div className="flex items-center gap-4 border-b border-black/[0.06] pb-6">
-                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-primary)] text-white shadow-md">
-                          <UserCheck className="h-8 w-8" style={{ color: 'var(--color-accent)' }} />
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <h2 className="text-xl font-extrabold text-[#1A202C]">Arjun Sharma</h2>
-                            <span className="rounded-full bg-emerald-100 px-2.5 py-0.5 text-[10px] font-bold text-emerald-800">
-                              Verified Resident
-                            </span>
-                          </div>
-                          <p className="text-xs text-[#64748B]">Resident at Bhagwati Homes Gurugram Sec 21 • Room 302</p>
-                        </div>
-                      </div>
-
-                      {/* Resident Quick Services Grid */}
-                      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                        <div className="rounded-2xl border border-[var(--color-primary)]/10 bg-[#FAF6F0] p-4">
-                          <KeyRound className="mb-2 h-5 w-5 text-[var(--color-primary)]" />
-                          <h4 className="text-xs font-bold text-[#1A202C]">Biometric Access</h4>
-                          <p className="mt-0.5 text-[11px] text-[#64748B]">Active • Main Gate & 3rd Floor</p>
-                        </div>
-                        <div className="rounded-2xl border border-[var(--color-primary)]/10 bg-[#FAF6F0] p-4">
-                          <Wifi className="mb-2 h-5 w-5 text-emerald-600" />
-                          <h4 className="text-xs font-bold text-[#1A202C]">Resident Wi-Fi</h4>
-                          <p className="mt-0.5 text-[11px] text-[#64748B]">300 Mbps Fiber • Connected</p>
-                        </div>
-                        <div className="rounded-2xl border border-[var(--color-primary)]/10 bg-[#FAF6F0] p-4">
-                          <UtensilsCrossed className="mb-2 h-5 w-5 text-[var(--color-accent)]" />
-                          <h4 className="text-xs font-bold text-[#1A202C]">Chef Menu Today</h4>
-                          <p className="mt-0.5 text-[11px] text-[#64748B]">Paneer Butter Masala & Roti</p>
-                        </div>
-                      </div>
-
-                      <div className="mt-6 flex flex-wrap gap-3">
-                        <button
-                          onClick={() => setActiveTab('support')}
-                          className="flex-1 rounded-xl bg-[var(--color-primary)] px-4 py-3 text-center text-xs font-bold text-white transition-all active:scale-95"
-                        >
-                          Contact Care Desk
-                        </button>
-                        <button
-                          onClick={() => setActiveTab('saved')}
-                          className="rounded-xl border border-[var(--color-primary)]/20 px-4 py-3 text-xs font-bold text-[var(--color-primary)] hover:bg-[#FAF6F0] transition-colors"
-                        >
-                          View Shortlisted ({savedRoomIds.length})
-                        </button>
-                      </div>
-                    </div>
+                    <HostProfileCard />
+                    <button onClick={() => setActiveTab('saved')} className="min-h-[44px] rounded-xl border border-[var(--color-primary)]/20 bg-white px-4 py-3 text-sm font-bold text-[var(--color-primary)]">
+                      View Saved Rooms ({savedRoomIds.length})
+                    </button>
                   </div>
                 )}
 
@@ -725,10 +664,10 @@ export default function App() {
                   <div className="mx-auto max-w-5xl space-y-6">
                     <div>
                       <h1 className="text-xl font-bold text-[#1A202C] md:text-2xl">
-                        Resident Support & Owner Messenger
+                        Contact Sachin, Owner
                       </h1>
                       <p className="text-xs text-[#64748B] md:text-sm">
-                        Direct real-time channel with PG Management and Housekeeping Desk
+                        Call or WhatsApp Sachin directly for help with rooms and visits.
                       </p>
                     </div>
                     <MessengerView />
